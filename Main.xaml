@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="764.8,752" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="764.8,872.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -62,15 +62,21 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="492.8,687.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="518.4,808" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="karani" />
     </Sequence.Variables>
@@ -79,22 +85,41 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:TriggerScope DisplayName="Trigger Scope" sap:VirtualizedContainerService.HintSize="451.2,594.4" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Sequential">
+    <ui:TriggerScope DisplayName="Trigger Scope" sap:VirtualizedContainerService.HintSize="476.8,715.2" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Sequential">
       <ui:TriggerScope.Action>
         <ActivityAction x:TypeArguments="ui:FileChangeTriggerArgs">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:FileChangeTriggerArgs" Name="args" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="375.2,178.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence sap:VirtualizedContainerService.HintSize="425.6,299.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="file_name" />
+              <Variable x:TypeArguments="x:String" Name="icerik" />
+              <Variable x:TypeArguments="x:String" Name="ahmet" />
+              <Variable x:TypeArguments="x:String" Name="file_content" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+            <ui:ReadTextFile DisplayName="Read Text File" FileName="C:\\Users\\Karani\\Desktop\\deneme\\karani.txt" sap:VirtualizedContainerService.HintSize="384,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+              <ui:ReadTextFile.Content>
+                <OutArgument x:TypeArguments="x:String">
+                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">file_content</mca:CSharpReference>
+                </OutArgument>
+              </ui:ReadTextFile.Content>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ReadTextFile>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="384,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2">
               <ui:MessageBox.Text>
                 <InArgument x:TypeArguments="x:Object">
-                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"valla çalıştı"</mca:CSharpValue>
+                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">file_content</mca:CSharpValue>
                 </InArgument>
               </ui:MessageBox.Text>
             </ui:MessageBox>
@@ -103,7 +128,7 @@
       </ui:TriggerScope.Action>
       <ui:TriggerScope.Triggers>
         <scg:List x:TypeArguments="Activity" Capacity="4">
-          <ui:FileChangeTriggerV3 IncludeSubdirectories="{x:Null}" ChangeType="All" DisplayName="File Change Trigger" sap:VirtualizedContainerService.HintSize="416,183.2" sap2010:WorkflowViewState.IdRef="FileChangeTriggerV3_1" NotifyFilters="FileName, DirectoryName, Attributes, Size, LastWrite, LastAccess, CreationTime, Security" Path="C:\Users\Karani\Desktop\deneme">
+          <ui:FileChangeTriggerV3 IncludeSubdirectories="{x:Null}" ChangeType="All" DisplayName="File Change Trigger" sap:VirtualizedContainerService.HintSize="441.6,183.2" sap2010:WorkflowViewState.IdRef="FileChangeTriggerV3_1" NotifyFilters="FileName, DirectoryName, Attributes, Size, LastWrite, LastAccess, CreationTime, Security" Path="C:\Users\Karani\Desktop\deneme">
             <ui:FileChangeTriggerV3.FileNameFilter>
               <InArgument x:TypeArguments="x:String">
                 <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">karani</mca:CSharpValue>
