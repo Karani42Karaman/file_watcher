@@ -3,6 +3,8 @@
   "description": "An application that monitors the movement of a file in a folder given its url path",
   "main": "Main.xaml",
   "dependencies": {
+    "MongoDB.Activities": "[1.0.0]",
+    "MongoDB.Driver": "[2.14.1]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.3]",
     "UiPath.System.Activities": "[21.10.4]",
