@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="760,1456.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:m="clr-namespace:MongoActivities;assembly=MongoActivities" xmlns:mb="clr-namespace:MongoDB.Bson;assembly=MongoDB.Bson" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:md="clr-namespace:MongoDB.Driver;assembly=MongoDB.Driver" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="970.4,2229.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:m="clr-namespace:MongoActivities;assembly=MongoActivities" xmlns:mb="clr-namespace:MongoDB.Bson;assembly=MongoDB.Bson" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:md="clr-namespace:MongoDB.Driver;assembly=MongoDB.Driver" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
@@ -96,32 +96,45 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Excel Watcher Sequence" sap:VirtualizedContainerService.HintSize="770.4,1392" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Excel Watcher Sequence" sap:VirtualizedContainerService.HintSize="945.6,2164.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:TriggerScope DisplayName="Trigger Scope" sap:VirtualizedContainerService.HintSize="728.8,1299.2" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Sequential">
+    <ui:TriggerScope DisplayName="Trigger Scope" sap:VirtualizedContainerService.HintSize="904,2072" sap2010:WorkflowViewState.IdRef="TriggerScope_1" SchedulingMode="Sequential">
       <ui:TriggerScope.Action>
         <ActivityAction x:TypeArguments="ui:FileChangeTriggerArgs">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:FileChangeTriggerArgs" Name="args" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Excel Reader Sequence" sap:VirtualizedContainerService.HintSize="677.6,883.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <Sequence DisplayName="Excel Reader Sequence" sap:VirtualizedContainerService.HintSize="852.8,1656" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="si:MemoryStream" Name="memoryOut">
+                <Variable.Default>
+                  <mca:CSharpValue x:TypeArguments="si:MemoryStream" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">new MemoryStream()</mca:CSharpValue>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="si:FileStream" Name="streamOut">
+                <Variable.Default>
+                  <mca:CSharpValue x:TypeArguments="si:FileStream" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">new FileStream("C:\\Users\\Karani\\Desktop\\deneme\\excel.xlsx", FileMode.Open)</mca:CSharpValue>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="s:Byte[]" Name="resultOut" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="636,790.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="C:\Users\Karani\Desktop\deneme\excel.xlsx">
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="811.2,1563.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="C:\Users\Karani\Desktop\deneme\excel.xlsx">
               <ui:ExcelApplicationScope.Body>
                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602.4,680.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="777.6,1453.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="gmail" />
                       <Variable x:TypeArguments="sd:DataTable" Name="users" />
@@ -132,26 +145,26 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="560.8,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="sayfa1">
+                    <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="736,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="sayfa1">
                       <ui:ExcelReadRange.DataTable>
                         <OutArgument x:TypeArguments="sd:DataTable">
                           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">users</mca:CSharpReference>
                         </OutArgument>
                       </ui:ExcelReadRange.DataTable>
                     </ui:ExcelReadRange>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560.8,488" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="736,1260.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="527.2,367.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="702.4,1140" sap2010:WorkflowViewState.IdRef="Sequence_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If sap:VirtualizedContainerService.HintSize="485.6,274.4" sap2010:WorkflowViewState.IdRef="If_2">
+                            <If sap:VirtualizedContainerService.HintSize="660.8,1047.2" sap2010:WorkflowViewState.IdRef="If_2">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">String.IsNullOrEmpty(Convert.ToString(row))</mca:CSharpValue>
@@ -174,7 +187,7 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="MongoDB Insert Sequence" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <Sequence DisplayName="MongoDB Insert Sequence" sap:VirtualizedContainerService.HintSize="375.2,888" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="md:MongoDatabaseBase" Name="mongoDatabase" />
                                     <Variable x:TypeArguments="md:IMongoCollection(mb:BsonDocument)" Name="rpacollection" />
@@ -182,18 +195,18 @@
                                   </Sequence.Variables>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <m:ConnectToMongo ConnectionString="mongodb://root:root@localhost:27017" DatabaseName="rpadb" DisplayName="Connect to mongo" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="ConnectToMongo_2">
+                                  <m:ConnectToMongo ConnectionString="mongodb://root:root@localhost:27017" DatabaseName="rpadb" DisplayName="Connect to mongo" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="ConnectToMongo_2">
                                     <m:ConnectToMongo.DataBase>
                                       <OutArgument x:TypeArguments="md:MongoDatabaseBase">
                                         <mca:CSharpReference x:TypeArguments="md:MongoDatabaseBase" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">mongoDatabase</mca:CSharpReference>
                                       </OutArgument>
                                     </m:ConnectToMongo.DataBase>
                                   </m:ConnectToMongo>
-                                  <m:GetMongoCollection CollectionName="rpacollection" DisplayName="Get mongo collection" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="GetMongoCollection_2">
+                                  <m:GetMongoCollection CollectionName="rpacollection" DisplayName="Get mongo collection" sap:VirtualizedContainerService.HintSize="333.6,188" sap2010:WorkflowViewState.IdRef="GetMongoCollection_2">
                                     <m:GetMongoCollection.Collection>
                                       <OutArgument x:TypeArguments="md:IMongoCollection(mb:BsonDocument)">
                                         <mca:CSharpReference x:TypeArguments="md:IMongoCollection(mb:BsonDocument)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">rpacollection</mca:CSharpReference>
@@ -205,7 +218,20 @@
                                       </InArgument>
                                     </m:GetMongoCollection.DataBase>
                                   </m:GetMongoCollection>
-                                  <m:InsertOneActivity DisplayName="Insert one activity" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="InsertOneActivity_2" InsertOneType="InsertOne">
+                                  <ui:InvokeCode ContinueOnError="{x:Null}" Code=" stream.CopyToAsync(memory);&#xA; &#xA; result = memory.ToArray();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                                    <ui:InvokeCode.Arguments>
+                                      <InOutArgument x:TypeArguments="si:MemoryStream" x:Key="memory">
+                                        <mca:CSharpReference x:TypeArguments="si:MemoryStream" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">memoryOut</mca:CSharpReference>
+                                      </InOutArgument>
+                                      <InOutArgument x:TypeArguments="si:FileStream" x:Key="stream">
+                                        <mca:CSharpReference x:TypeArguments="si:FileStream" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">streamOut</mca:CSharpReference>
+                                      </InOutArgument>
+                                      <InOutArgument x:TypeArguments="s:Byte[]" x:Key="result">
+                                        <mca:CSharpReference x:TypeArguments="s:Byte[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">resultOut</mca:CSharpReference>
+                                      </InOutArgument>
+                                    </ui:InvokeCode.Arguments>
+                                  </ui:InvokeCode>
+                                  <m:InsertOneActivity DisplayName="Insert one activity" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="InsertOneActivity_2" InsertOneType="InsertOne">
                                     <m:InsertOneActivity.Collection>
                                       <InArgument x:TypeArguments="md:IMongoCollection(mb:BsonDocument)">
                                         <mca:CSharpValue x:TypeArguments="md:IMongoCollection(mb:BsonDocument)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">rpacollection</mca:CSharpValue>
@@ -213,55 +239,10 @@
                                     </m:InsertOneActivity.Collection>
                                     <m:InsertOneActivity.InsertElement>
                                       <InArgument x:TypeArguments="mb:BsonDocument">
-                                        <mca:CSharpValue x:TypeArguments="mb:BsonDocument" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">new BsonDocument(new BsonElement("gmail",Convert.ToString(row["gmail"])),new BsonElement("name",Convert.ToString(row["name"])),new BsonElement("surname",Convert.ToString(row["surname"])),new BsonElement("age",Convert.ToString(row["age"])))</mca:CSharpValue>
+                                        <mca:CSharpValue x:TypeArguments="mb:BsonDocument" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">new BsonDocument(new BsonElement("FileContent",resultOut))</mca:CSharpValue>
                                       </InArgument>
                                     </m:InsertOneActivity.InsertElement>
                                   </m:InsertOneActivity>
-                                  <m:FindActivity DisplayName="Find " sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="FindActivity_2">
-                                    <m:FindActivity.Collection>
-                                      <InArgument x:TypeArguments="md:IMongoCollection(mb:BsonDocument)">
-                                        <mca:CSharpValue x:TypeArguments="md:IMongoCollection(mb:BsonDocument)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">rpacollection</mca:CSharpValue>
-                                      </InArgument>
-                                    </m:FindActivity.Collection>
-                                    <m:FindActivity.FilterQuery>
-                                      <InArgument x:TypeArguments="mb:BsonDocument">
-                                        <mca:CSharpValue x:TypeArguments="mb:BsonDocument" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">new BsonDocument()</mca:CSharpValue>
-                                      </InArgument>
-                                    </m:FindActivity.FilterQuery>
-                                    <m:FindActivity.FindResult>
-                                      <OutArgument x:TypeArguments="scg:List(mb:BsonDocument)">
-                                        <mca:CSharpReference x:TypeArguments="scg:List(mb:BsonDocument)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">findResult</mca:CSharpReference>
-                                      </OutArgument>
-                                    </m:FindActivity.FindResult>
-                                  </m:FindActivity>
-                                  <ui:ForEach x:TypeArguments="mb:BsonDocument" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="433.6,310.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
-                                    <ui:ForEach.Body>
-                                      <ActivityAction x:TypeArguments="mb:BsonDocument">
-                                        <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="mb:BsonDocument" Name="item" />
-                                        </ActivityAction.Argument>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
-                                            <ui:LogMessage.Message>
-                                              <InArgument x:TypeArguments="x:Object">
-                                                <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">item["gmail"]</mca:CSharpValue>
-                                              </InArgument>
-                                            </ui:LogMessage.Message>
-                                          </ui:LogMessage>
-                                        </Sequence>
-                                      </ActivityAction>
-                                    </ui:ForEach.Body>
-                                    <ui:ForEach.Values>
-                                      <InArgument x:TypeArguments="sc:IEnumerable">
-                                        <mca:CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">findResult</mca:CSharpValue>
-                                      </InArgument>
-                                    </ui:ForEach.Values>
-                                  </ui:ForEach>
                                 </Sequence>
                               </If.Else>
                             </If>
@@ -295,7 +276,7 @@
       </ui:TriggerScope.Action>
       <ui:TriggerScope.Triggers>
         <scg:List x:TypeArguments="Activity" Capacity="4">
-          <ui:FileChangeTriggerV3 IncludeSubdirectories="{x:Null}" ChangeType="Created" DisplayName="File Change Trigger" sap:VirtualizedContainerService.HintSize="693.6,183.2" sap2010:WorkflowViewState.IdRef="FileChangeTriggerV3_1" NotifyFilters="FileName, DirectoryName, Attributes, Size, LastWrite, LastAccess, CreationTime, Security" Path="C:\Users\Karani\Desktop\deneme">
+          <ui:FileChangeTriggerV3 IncludeSubdirectories="{x:Null}" ChangeType="Created" DisplayName="File Change Trigger" sap:VirtualizedContainerService.HintSize="868.8,183.2" sap2010:WorkflowViewState.IdRef="FileChangeTriggerV3_1" NotifyFilters="FileName, DirectoryName, Attributes, Size, LastWrite, LastAccess, CreationTime, Security" Path="C:\Users\Karani\Desktop\deneme">
             <ui:FileChangeTriggerV3.FileNameFilter>
               <InArgument x:TypeArguments="x:String">
                 <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">excel</mca:CSharpValue>
