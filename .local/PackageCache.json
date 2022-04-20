@@ -208,6 +208,19 @@
         "C:\\Users\\Karani\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Karani\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.dll",
+        "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities\\1.4.0"
     }
   ],
   "Conflicts": [],
@@ -1206,6 +1219,11 @@
           "Item2": "[1.5.3, )"
         }
       ]
+    },
+    "UiPath.Database.Activities": {
+      "Id": "UiPath.Database.Activities",
+      "Version": "1.4.0",
+      "Dependencies": []
     },
     "UiPath.Excel.Activities": {
       "Id": "UiPath.Excel.Activities",
@@ -2348,6 +2366,19 @@
         "C:\\Users\\Karani\\.nuget\\packages\\uipath.connectionclient\\1.0.0-20210921.1\\lib\\net461\\ConnectionClient.dll"
       ],
       "Path": "C:\\Users\\Karani\\.nuget\\packages\\uipath.connectionclient\\1.0.0-20210921.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.Activities.dll",
+        "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities\\1.4.0"
     },
     {
       "Package": {

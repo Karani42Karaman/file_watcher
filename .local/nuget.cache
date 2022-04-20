@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ug4idhBlHfoG1vvNURT/bwalZta93RcbUsoEB0zx50MwGS6iEnzriRC9YXY3bVEA/ZYvtyLVVmc1+G3wR5SNqg==",
+  "dgSpecHash": "73h5vP4jCxZ+ocS58hthw4HSqT8CvcDIAaJtWxaDDbrIWewR1My389svlsDYuilN35nvPB+9ddcGdl1jY92yYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Karani\\Desktop\\deneme\\file_watcher\\.local\\",
   "expectedPackageFiles": [
@@ -92,6 +92,7 @@
     "C:\\Users\\Karani\\.nuget\\packages\\uipath\\21.10.34.30369\\uipath.21.10.34.30369.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.3\\uipath.activities.runtimegovernance.1.1.3.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.connectionclient\\1.0.0-20210921.1\\uipath.connectionclient.1.0.0-20210921.1.nupkg.sha512",
+    "C:\\Users\\Karani\\.nuget\\packages\\uipath.database.activities\\1.4.0\\uipath.database.activities.1.4.0.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\uipath.excel.activities.2.11.4.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.imageprocessing\\21.10.2\\uipath.imageprocessing.21.10.2.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\uipath.mail.activities.1.12.3.nupkg.sha512",
