@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "73h5vP4jCxZ+ocS58hthw4HSqT8CvcDIAaJtWxaDDbrIWewR1My389svlsDYuilN35nvPB+9ddcGdl1jY92yYQ==",
+  "dgSpecHash": "F/hhjTM4P2VTODoN5WrK8k/3xcIVBUz1HCunjqL47S0JngNWyrZ6U1T67pXplQsnfXa0cekBkikUIIhhWH3waw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Karani\\Desktop\\deneme\\file_watcher\\.local\\",
   "expectedPackageFiles": [
@@ -67,7 +67,7 @@
     "C:\\Users\\Karani\\.nuget\\packages\\npoi\\2.4.1\\npoi.2.4.1.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\portable.bouncycastle\\1.8.8\\portable.bouncycastle.1.8.8.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
-    "C:\\Users\\Karani\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
+    "C:\\Users\\Karani\\.nuget\\packages\\sharpziplib\\1.3.3\\sharpziplib.1.3.3.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
@@ -98,8 +98,8 @@
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.mail.activities\\1.12.3\\uipath.mail.activities.1.12.3.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.ocr.activities\\3.3.2\\uipath.ocr.activities.3.3.2.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.ocr.contracts\\2.9.1\\uipath.ocr.contracts.2.9.1.nupkg.sha512",
-    "C:\\Users\\Karani\\.nuget\\packages\\uipath.platform\\21.10.0\\uipath.platform.21.10.0.nupkg.sha512",
-    "C:\\Users\\Karani\\.nuget\\packages\\uipath.system.activities\\21.10.4\\uipath.system.activities.21.10.4.nupkg.sha512",
+    "C:\\Users\\Karani\\.nuget\\packages\\uipath.platform\\22.4.1\\uipath.platform.22.4.1.nupkg.sha512",
+    "C:\\Users\\Karani\\.nuget\\packages\\uipath.system.activities\\22.4.1\\uipath.system.activities.22.4.1.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\uipath.telemetry.client.1.5.3.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.5\\uipath.uiautomation.activities.21.10.5.nupkg.sha512",
     "C:\\Users\\Karani\\.nuget\\packages\\uipath.vision\\3.1.4\\uipath.vision.3.1.4.nupkg.sha512"
