@@ -94,7 +94,6 @@
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
       <AssemblyReference>System.Security.Cryptography.Algorithms</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -103,7 +102,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Excel Watcher Sequence" sap:VirtualizedContainerService.HintSize="1766.4,5412" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Excel Watcher Sequence" sap:VirtualizedContainerService.HintSize="1766.4,5130.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="folderPath" />
       <Variable x:TypeArguments="x:Int32" Name="mysqlCount" />
@@ -235,7 +234,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xA;try{&#xA;stream =  File.OpenRead(fullPathFile1);&#xA;&#xA; &#xA; &#xA;&#x9;Console.WriteLine(&quot;path:2&quot;+fullPathFile1);&#xA;}catch(Exception e){&#xA;&#x9;Console.WriteLine(&quot;path2:&quot;+fullPathFile1);&#xA;&#x9;Console.WriteLine(&quot;exception : &quot;+ e.Message);&#xA;}&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="1590.4,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+              <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;try{&#xD;&#xA;stream =  File.OpenRead(fullPathFile1);&#xD;&#xA; stream.CopyToAsync(memory);&#xD;&#xA;&#xD;&#xA; &#xD;&#xA; &#xD;&#xA;&#x9;Console.WriteLine(&quot;path:2&quot;+fullPathFile1);&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;Console.WriteLine(&quot;path2:&quot;+fullPathFile1);&#xD;&#xA;&#x9;Console.WriteLine(&quot;exception : &quot;+ e.Message);&#xD;&#xA;}&#xD;&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="1590.4,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                 <ui:InvokeCode.Arguments>
                   <InOutArgument x:TypeArguments="si:MemoryStream" x:Key="memory">
                     <mca:CSharpReference x:TypeArguments="si:MemoryStream" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">memoryOut</mca:CSharpReference>
@@ -352,7 +351,7 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xA;try{&#xA;stream =  File.OpenRead(fullPathFile1);&#xA; stream.CopyToAsync(memory);&#xA; result = memory.ToArray();&#x9; &#xA;using (var md5 = System.Security.Cryptography.MD5.Create()) {&#xA;    md5.TransformFinalBlock(result, 0, result.Length);&#xA;    hash = md5.Hash;&#xA;}&#xA;}catch(Exception e){&#xA;&#x9;Console.WriteLine(&quot;exception : &quot;+ e.Message);&#xA;}&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="1071.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;try{&#xD;&#xA; result = memory.ToArray();&#x9; &#xD;&#xA;using (var md5 = System.Security.Cryptography.MD5.Create()) {&#xD;&#xA;    md5.TransformFinalBlock(result, 0, result.Length);&#xD;&#xA;    hash = md5.Hash;&#xD;&#xA;}&#xD;&#xA;}catch(Exception e){&#xD;&#xA;&#x9;Console.WriteLine(&quot;exception : &quot;+ e.Message);&#xD;&#xA;}&#xD;&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="1071.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
                                         <ui:InvokeCode.Arguments>
                                           <InOutArgument x:TypeArguments="si:MemoryStream" x:Key="memory">
                                             <mca:CSharpReference x:TypeArguments="si:MemoryStream" sap2010:WorkflowViewState.IdRef="CSharpReference`1_52">memoryOut</mca:CSharpReference>

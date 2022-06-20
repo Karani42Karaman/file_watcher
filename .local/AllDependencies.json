@@ -8205,9 +8205,9 @@
     "restore": {
       "projectUniqueName": "file_watcher",
       "projectName": "file_watcher",
-      "projectPath": "C:\\Users\\Karani\\Desktop\\deneme\\file_watcher-652592f0b0e9a2d9b106661fbb2ba12a28f3e4442\\.local",
+      "projectPath": "C:\\Users\\Karani\\Desktop\\deneme\\file_watcher\\.local",
       "packagesPath": "C:\\Users\\Karani\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Karani\\Desktop\\deneme\\file_watcher-652592f0b0e9a2d9b106661fbb2ba12a28f3e4442\\.local"
+      "outputPath": "C:\\Users\\Karani\\Desktop\\deneme\\file_watcher\\.local"
     },
     "frameworks": {
       "net461": {
